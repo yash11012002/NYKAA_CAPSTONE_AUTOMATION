@@ -5,4 +5,6 @@ public interface HomePage {
     boolean isHomePageDisplayed();
 
     boolean verifyUserSuccessfullyLoggedIn();
+
+    void userSearchProduct(String productName);
 }

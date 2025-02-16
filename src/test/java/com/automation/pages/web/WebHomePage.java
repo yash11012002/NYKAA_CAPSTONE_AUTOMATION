@@ -13,4 +13,9 @@ public class WebHomePage extends WebBasePage implements HomePage {
     public boolean verifyUserSuccessfullyLoggedIn() {
         return true;
     }
+
+    @Override
+    public void userSearchProduct(String productName) {
+
+    }
 }
