@@ -24,7 +24,7 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
 
 
     @Override
-    public boolean isProductListingPageIsDisplayed() {
+    public boolean isProductListingPageDisplayed() {
         return verifyTitle.isDisplayed();
     }
 

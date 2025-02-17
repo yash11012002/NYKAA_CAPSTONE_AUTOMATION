@@ -2,7 +2,7 @@ package com.automation.pages.interfaces;
 
 public interface ProductListing {
 
-    boolean isProductListingPageIsDisplayed();
+    boolean isProductListingPageDisplayed();
     void clickOnFilterTab();
-    public boolean verifyFiltersApplied();
+    boolean verifyFiltersApplied();
 }

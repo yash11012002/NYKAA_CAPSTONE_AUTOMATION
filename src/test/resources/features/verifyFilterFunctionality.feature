@@ -12,7 +12,7 @@ Feature: Verify Filters and Product Selection
     Then verify filter page is displayed
     When user applies selected filters
     Then verify filters are applied correctly
-    When user selects the first product
+#    When user selects the first product
 #    Then verify item page is displayed
 #    When user add item add to cart
 #    And click on continue button

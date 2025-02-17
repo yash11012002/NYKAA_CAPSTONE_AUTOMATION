@@ -9,7 +9,7 @@ public class ProductListingSteps extends BaseSteps {
 
     @Then("verify product listing page is displayed")
     public void verifyProductListingPageIsDisplayed() {
-        productListing.isProductListingPageIsDisplayed();
+        Assert.assertTrue(productListing.isProductListingPageDisplayed());
     }
     
     @When("user click on filter tab")
