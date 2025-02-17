@@ -1,3 +1,4 @@
+@web @android
 Feature: Verify Filters and Product Selection
 
   Scenario: Verify user applies filters and views filtered products

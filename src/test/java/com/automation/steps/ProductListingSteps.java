@@ -1,6 +1,7 @@
 package com.automation.steps;
 
 import com.automation.pages.interfaces.ProductListing;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -24,5 +25,10 @@ public class ProductListingSteps extends BaseSteps {
 
     @When("user selects the first product")
     public void userSelectsTheFirstProduct() {
+        productListing.userClickOnFirstProduct();
     }
+
+
+
+
 }

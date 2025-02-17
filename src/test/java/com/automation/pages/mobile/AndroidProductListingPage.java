@@ -24,6 +24,9 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
     @FindBy(xpath = "//android.widget.TextView[contains(translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'ponds') or contains(translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'adhyay')]")
     List<WebElement> listOfProducts;
 
+    @FindBy(xpath = "(//androidx.appcompat.widget.LinearLayoutCompat[@resource-id=\"com.fsn.nykaa:id/ll_product_item\"])[1]")
+    WebElement firstProduct;
+
 
     @Override
     public boolean isProductListingPageDisplayed() {
@@ -78,5 +81,11 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
 
         return allProductsMatch;  // If all products match the filter, return true; otherwise, false
     }
+
+    @Override
+    public void userClickOnFirstProduct() {
+        firstProduct.click();
+    }
+
 
 }

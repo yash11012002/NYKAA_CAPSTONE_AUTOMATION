@@ -20,14 +20,22 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     }
 
     @Override
-    public void clickOnFilterTab(){
+    public void clickOnFilterTab() {
 //  This is implemented in the Android Application
     }
-    public boolean verifyFiltersApplied(){
-        for(WebElement productTitle:productTitles){
-            if(!(productTitle.equals("Ponds")||productTitle.equals("Adhyay")))
+
+    public boolean verifyFiltersApplied() {
+        for (WebElement productTitle : productTitles) {
+            if (!(productTitle.equals("Ponds") || productTitle.equals("Adhyay")))
                 return false;
         }
         return true;
     }
+
+    @Override
+    public void userClickOnFirstProduct() {
+
+    }
+
+
 }
