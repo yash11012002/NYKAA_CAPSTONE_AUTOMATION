@@ -1,9 +1,11 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.ProductListing;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,34 +46,37 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
         int endX = startX;  // End X (same as startX)
         int endY = (int) (height * 0.2);  // Scroll upwards (to 20% of screen height)
 
-        // List to store products containing "Ponds" or "Adhyay"
+        // Keep track of products we've already checked
         List<String> brandCheck = new ArrayList<>();
+        boolean allProductsMatch = false;
 
-        // Scroll and verify until the "no more products" element is displayed
+        // Start scrolling and checking products
         while (!isElementDisplayed(noMoreProduct)) {
-            boolean allProductsMatch = true;  // Flag to track if all products match the filter
+            // Re-fetch the list of products after each scroll to get the updated set of products
+            List<WebElement> listOfProducts = driver.findElements(By.xpath("//android.widget.TextView[contains(translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'ponds') or contains(translate(@text, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'adhyay')]"));
 
-            // Loop through each product in the list
+            // Check if there are new products that match the filter
             for (WebElement product : listOfProducts) {
                 String productText = product.getText().toLowerCase();  // Convert to lowercase for case-insensitive comparison
-
-                // If the product doesn't match the filter, set flag to false
-                if (!(productText.contains("ponds") || productText.contains("adhyay"))) {
-                    allProductsMatch = false;
-                    break;  // Exit the loop as soon as a non-matching product is found
+                if ((productText.contains("ponds") || productText.contains("adhyay")) && !brandCheck.contains(productText)) {
+                    brandCheck.add(productText);  // Add the product to the checked list
                 }
             }
 
             // If all products match the filter, return true
-            if (allProductsMatch) {
-                return true;
+            if (brandCheck.size() == listOfProducts.size()) {
+                allProductsMatch = true;
+                break;
             }
 
-            // Scroll down to load more products
-            scroll(startX, startY, endX, endY);  // Placeholder for your scroll logic
+            // Scroll to load more products
+            scroll(startX, startY, endX, endY);
+
+            // Wait for new products to load (adjust the wait time if necessary)
+            pause(2000);  // Wait for products to load
         }
 
-        // If the loop ends and we never found all products matching, return false
-        return false;
+        return allProductsMatch;  // If all products match the filter, return true; otherwise, false
     }
+
 }

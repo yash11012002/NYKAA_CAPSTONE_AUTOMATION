@@ -31,7 +31,7 @@ public class AndroidBasePage {
     }
     public boolean isElementDisplayed(WebElement element){
         try {
-            setTimeout(20);
+            setTimeout(10);
             return element.isDisplayed();
         }catch (Exception e){
             return false;
