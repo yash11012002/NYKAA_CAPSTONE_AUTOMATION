@@ -1,3 +1,4 @@
+@web @android
 Feature: Verify Product Search Functionality
 
   Scenario Outline: Verify user can search for products successfully

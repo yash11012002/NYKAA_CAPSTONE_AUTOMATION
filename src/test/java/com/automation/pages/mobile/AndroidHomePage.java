@@ -1,7 +1,6 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.HomePage;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -48,6 +47,33 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
 
     @Override
     public void clickOnStoreAndEventsBtn() {
-        //This is implemented in Web Application
+        //This function is implemented in Web
+    }
+
+    @Override
+    public void clickOnGiftCardTab() {
+        //This function is implemented in Web
+    }
+
+    @Override
+    public boolean isProductOutOfStock() {
+        //This function is implemented in Web
+        return true;
+    }
+
+    @Override
+    public void clickOnNotifyBtn() {
+        //This function is implemented in Web
+    }
+
+    @Override
+    public void proceedForNotify() {
+        //This function is implemented in Web
+    }
+
+    @Override
+    public boolean isAlertMsgDisplayed() {
+        //This function is implemented in Web
+        return true;
     }
 }

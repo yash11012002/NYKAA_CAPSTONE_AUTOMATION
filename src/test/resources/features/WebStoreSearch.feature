@@ -16,5 +16,5 @@ Feature: Verify store locator feature and store results in text file
    |Bengaluru      |
    |Pune           |
    |Trivandrum     |
-   |Hyderabad      |
+   |Ahmedabad      |
    |Delhi          |

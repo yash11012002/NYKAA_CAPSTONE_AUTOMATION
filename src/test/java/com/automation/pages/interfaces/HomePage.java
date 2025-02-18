@@ -7,5 +7,16 @@ public interface HomePage {
     boolean verifyUserSuccessfullyLoggedIn();
 
     void userSearchProduct(String productName);
+
     void clickOnStoreAndEventsBtn();
+
+    void clickOnGiftCardTab();
+
+    boolean isProductOutOfStock();
+
+    void clickOnNotifyBtn();
+
+    void proceedForNotify();
+
+    boolean isAlertMsgDisplayed();
 }

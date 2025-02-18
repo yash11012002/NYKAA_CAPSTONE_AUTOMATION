@@ -2,7 +2,6 @@ package com.automation.pages.web;
 
 import com.automation.pages.interfaces.FilterPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -25,6 +24,7 @@ public class WebFilterPage extends WebBasePage implements FilterPage {
         applyFilter("Adhyay");
     }
     private void applyFilter(String filter){
+        searchInput.clear();
         searchInput.clear();
         searchInput.sendKeys(filter);
         driver.findElement(By.xpath("//div[@class='control-value']/span[@class='title']")).click();

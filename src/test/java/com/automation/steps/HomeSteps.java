@@ -1,6 +1,5 @@
 package com.automation.steps;
 
-import com.automation.pages.mobile.AndroidHomePage;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -25,12 +24,33 @@ public class HomeSteps extends BaseSteps {
     }
 
 
-    @When("user search for products {string}")
-    public void userSearchForProducts(String productsName) {
-        homePage.userSearchProduct(productsName);
-    }
     @When("user clicks on store locator tab")
     public void userClicksOnStoreLocatorTab() {
         homePage.clickOnStoreAndEventsBtn();
+    }
+
+    @When("user clicks on gift card tab")
+    public void userClicksOnGiftCardTab() {
+        homePage.clickOnGiftCardTab();
+    }
+
+    @When("user checks for out-of-stock products")
+    public void userChecksForOutOfStockProducts() {
+        Assert.assertTrue(homePage.isProductOutOfStock());
+    }
+
+    @And("user clicks on the notify button")
+    public void userClicksOnTheNotifyButton() {
+        homePage.clickOnNotifyBtn();
+    }
+
+    @When("user enters the email address and clicks on the proceed button")
+    public void userEntersTheEmailAddressAndClicksOnTheProceedButton() {
+        homePage.proceedForNotify();
+    }
+
+    @Then("verify alert message is displayed")
+    public void verifyAlertMessageIsDisplayed() {
+        Assert.assertTrue(homePage.isAlertMsgDisplayed());
     }
 }

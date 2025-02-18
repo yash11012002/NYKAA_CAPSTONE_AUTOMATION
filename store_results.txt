@@ -78,3 +78,125 @@ Store Name: Nykaa Kiosk - Nykaa Kiosk Phoenix Millenium Mall Pune
 Open : 10:00 AM - 10:00 PM
 Address: OPR (F3) B on the First Floor,S No. 132, 23, Pune - Bangalore Highway, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057
 
+City: Trivandrum
+
+Store Name: Nykaa Luxe - Nykaa Luxe Trivandrum
+Open : 11:00 AM - 09:00 PM
+Address: Nykaa Luxe, Lulu Mall, C12 &13, Lulu Mall, Kazhakootam - Kovalam Bypass Road, Kochuveli, Thiruvananthapuram - 695021
+
+Store Name: Nykaa Kiosk - Nykaa Kiosk Lulu Mall Kochi
+Open : 10:00 AM - 10:00 PM
+Address: Nykaa Kiosk, Ground floor, K-07, Lulu International Shopping Mall Pvt. Ltd TC 91/270, Akkulam Bridge, Anayara Post, Thiruvananthapuram, Kerala 695029
+
+City: Ahmedabad
+
+Store Name: Nykaa Luxe - Alpha One Mall
+Open : 11:00 AM - 09:30 PM
+Address: Ground Floor, Unit No. G-35, Plot No-216, T.P Scheme-1, Near Vastrapur Lake, Vastrapur, Ahmedabad, Gujarat 380054
+
+Store Name: Nykaa Luxe - One 42
+Open : 11:00 AM - 08:00 PM
+Address: One 42 CHS, Shop No. G - 09 Retail Plaza, Opp Ashok VatikaOff Bopal Ambi RoadBodakdev, Ahmedabad, Gujarat 380058
+
+Store Name: Nykaa On Trend - Nykaa On Trend Shyamal, Ahmedabad
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa On Trend, Shop No. 04, Ground Floor, Iconic Shyamal, The Samrudhi Co. Op. Hsg. Soc. Ltd., 132 Ring Road, Shyamal Cross Road, Satellite, Ahmedabad, Gujarat – 480015
+
+Store Name: Nykaa Luxe - Nykaa Luxe Palladium Mall Ahmedabad
+Open : 11:00 AM - 10:00 PM
+Address: Nykaa Luxe, F-02, First Floor, Palladium Mall, SG Highway, Final Plot No 1 of Thaltej, Revenue Village, Ahmedabad
+
+Store Name: Nykaa On Trend - Nykaa On Trend Maninagar Ahmedabad HS
+Open : 10:00 AM - 10:00 PM
+Address: Nykaa On Trend G-5B, The Arena, Near Kankaria Lake Gate No. 3, Near Diwan Ballubhai School, Kankaria, Ahmedabad-380002
+
+City: Delhi
+
+Store Name: Nykaa Luxe - Khan Market
+Open : 11:00 AM - 09:30 PM
+Address: 58b, Rabindra Nagar New Delhi- 110003
+
+Store Name: Nykaa Luxe - The Chanakya
+Open : 11:00 AM - 09:30 PM
+Address: Second floor Unit No S202-203 13A-16D, Tikendrajeet Marg New Delhi- 110021
+
+Store Name: Nykaa Luxe - Indira Gandhi International Airport
+Open : 11:00 AM - 09:30 PM
+Address: Domestic Departure, Terminal-3 New Delhi- 110037
+
+Store Name: Nykaa Luxe - Pacific Mall
+Open : 11:00 AM - 09:30 PM
+Address: Pacfic Mall, Unit No GF - 39, Najafgarh Rd, Tagore Garden, Tilak Nagar, New Delhi, Delhi 110018 Ph: 011-46010013
+
+Store Name: Nykaa Luxe - Khan Market 2
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe, Khan Market, 45-A, Front Portion, New Delhi - 110003
+
+Store Name: Nykaa Kiosk - Select CITYWALK Mall
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa (Kiosk), Select City Walk Mall, A-3, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi - 110017
+
+Store Name: Nykaa On Trend - Pacific Mall, Dwarka
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa On Trend Pacific Mall, SH 1F-15, 1st Floor, Sector 21, Dwarka Metro Station of Line 3 and Airport Express Line New Delhi, Delhi 110077
+
+Store Name: Nykaa Luxe - Ambience Mall
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe, Ambience Mall, Unit No. UG - 19, 2, Nelson Mandela Marg, Vasant Kunj II, Vasant Kunj, New Delhi, Delhi 110070
+
+Store Name: Nykaa Luxe - DLF Avenue Mall
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe, DLF Avenue Mall Saket, Shop No. GF -178A, Saket District Centre, District Centre, Sector 6, Pushp Vihar, New Delhi, Delhi 110017
+
+Store Name: Nykaa Kiosk - DLF Promenade
+Open : 11:00 AM - 08:00 PM
+Address: Nykaa Kiosk, DLF Promenade Mall, Opposite to Zara, Side Atrium, Ground floor, 3 Nelson Mandela Road, Vasant Kunj Mall Road, Vasant Kunj, New Delhi - 110070
+
+Store Name: Nykaa On Trend - Green Park
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa On Trend, S-28, Main Market, Green Park, New Delhi - 110016
+
+Store Name: Nykaa On Trend - Lajpat Nagar
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa On Trend, Shop No. E -23B, Ground Floor, Central Market, Lajpat Nagar II, Lajpat Nagar, New Delhi - 110024
+
+Store Name: Nykaa Luxe - Pacific, NSP, New Delhi
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe Pacific Mall NSP, SH/GF/13, Ground Floor at Pacific Mall, Netaji Subhash Place
+
+Store Name: Nykaa On Trend - Kamla Nagar, New Delhi
+Open : 11:00 AM - 09:00 PM
+Address: Nykaa On Trend, Shop No - 28UA, Ground Floor, Bungalow Road, Kamla Nagar, Delhi, 110007
+
+Store Name: Nykaa Luxe - Nykaa Luxe Karol Bagh Delhi
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe Karol Bagh, Delhi, Shop No 2,6/30-31, Ajmal Khan Road, Karol Bagh, New Delhi 110005
+
+Store Name: Nykaa Kiosk - Nykaa Kiosk, V3S Mall, New Delhi
+Open : 10:00 AM - 11:00 PM
+Address: Nykaa Kiosk, V3S Mall, Vikas Marg, Laxmi Nagar Commercial Complex, Swasthya Vihar, New Delhi, Delhi 110092
+
+Store Name: Nykaa On Trend - Nykaa On Trend Paschim Vihar, Delhi
+Open : 11:00 AM - 09:00 PM
+Address: Nykaa On Trend, A-3/12, Ground Floor, (west Sidepart), Paschim Vihar new delhi- 110063
+
+Store Name: Nykaa On Trend - Nykaa On Trend Rajouri Garden, Delhi
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa On Trend, Right side portion of shop no F122, Main market, Rajouri Garden, New delhi, 110027
+
+Store Name: Nykaa Luxe - Nykaa Luxe Pacific Mall Jasola
+Open : 09:30 AM - 10:00 PM
+Address: Nykaa Luxe, Ground Floor, Pacific Mall, Jasola, Apollo Metro Station , Sarita Vihar, Mathura Road , New Delhi ? 110044
+
+Store Name: Nykaa Kiosk - Nykaa Kiosk NSP Delhi
+Open : 10:00 AM - 10:00 PM
+Address: Nykaa kiosk, Unit no EK/GF/13, Walk street ground floor, Pacific Mall NSP Pritam pura , Pin 110034
+
+Store Name: Nykaa Luxe - Nykaa Luxe Pacific Mall
+Open : 11:00 AM - 10:00 PM
+Address: FSN Brands Marketing Pvt. Ltd., Nykaa Luxe, SH/GF-13, Ground Floor, Pacific Mall, Tagore Garden, Najafgarh Road, New Delhi, INDIA.
+
+Store Name: Nykaa On Trend - Nykaa On Trend Omaxe Mall Chandni Chowk
+Open : 10:00 AM - 10:00 PM
+Address: Nykaa GF-171,172,173,174 & 175 Omaxe Mall, Chandni Chowk, HC Sen Marg, Gandhi Maidan, Delhi, 110006
+

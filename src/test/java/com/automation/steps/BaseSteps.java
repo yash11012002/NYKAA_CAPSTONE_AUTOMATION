@@ -15,6 +15,7 @@ public class BaseSteps {
     StoreLocatorPage storeLocatorPage;
     CartPage cartPage;
     OfferPage offerPage;
+    GiftCardPage giftCardPage;
 
     public BaseSteps() {
         if (ConfigReader.getConfigValue("platform").equals("web")) {
@@ -26,6 +27,8 @@ public class BaseSteps {
             storeLocatorPage = new WebStoreLocatorPage();
             cartPage=new WebCartPage();
             offerPage=new WebOfferPage();
+            giftCardPage = new WebGiftCardPage();
+
         } else {
             loginPage = new AndroidLoginPage();
             homePage = new AndroidHomePage();
@@ -35,6 +38,7 @@ public class BaseSteps {
             storeLocatorPage= new AndroidStoreLocatorPage();
             cartPage=new AndroidCartPage();
             offerPage=new AndroidOfferPage();
+            giftCardPage = new AndroidGiftCardPage();
         }
     }
 }
