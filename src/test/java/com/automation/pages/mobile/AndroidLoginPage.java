@@ -20,6 +20,9 @@ public class AndroidLoginPage extends AndroidBasePage implements LoginPage {
     @FindBy(id="com.fsn.nykaa:id/cross")
     WebElement crossTab;
 
+    @FindBy(id="com.fsn.nykaa:id/btnSkip")
+    WebElement skipTab;
+
     @Override
     public void openApplication(){
         if(isElementDisplayed(useAnotherNumber)){
@@ -39,6 +42,10 @@ public class AndroidLoginPage extends AndroidBasePage implements LoginPage {
         if(isElementDisplayed(crossTab)) {
             crossTab.click();
         }
+    }
+    @Override
+    public void userSkipsSignIn(){
+        skipTab.click();
     }
 
 

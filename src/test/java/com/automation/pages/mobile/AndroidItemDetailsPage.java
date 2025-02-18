@@ -1,6 +1,7 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.ItemDetailsPage;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,6 +22,12 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
     @FindBy(xpath = "//android.view.View[@resource-id=\"com.fsn.nykaa:id/exo_subtitles\"]")
     WebElement stoppingCondition;
 
+    @FindBy(id = "com.fsn.nykaa:id/btn_change_edd")
+    WebElement changeAddressBtn;
+
+    @FindBy(id = "com.fsn.nykaa:id/tv_hint_label")
+    WebElement enterPincodeElement;
+
     @Override
     public boolean verifyItemsDetailsPageIsDisplayed() {
         return productIcon.isDisplayed();
@@ -40,17 +47,37 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
 
     @Override
     public void userPerformSwipeFunctionality() {
-        int iconHeight = parentProductIcon.getSize().height;
-        int iconWidth = parentProductIcon.getSize().width;
-        int startX = iconWidth - 100;
-        int startY = iconHeight / 2;
-        int endX = (startX / 2) - 300;
-        int endY = startY;
+        Dimension screenSize = driver.manage().window().getSize();
+        int height = screenSize.getHeight();
+        int width = screenSize.getWidth();
+        int startX = (width / 2) + 350;
+        int startY = height / 2;  //
+        int endX = (width / 2) - 350;// Start closer to the bottom (80% of screen height)
+        int endY = startY;  // End closer to the top (20% of screen height)
+        while (!isElementDisplayed(stoppingCondition)){
+            scroll(startX,startY,endX,endY);
+        }
 
-        //while (!isElementDisplayed(stoppingCondition)){
-      //  scroll();
-            swipe(startX,startY,endX,endY);
-       // }
+    }
+    @Override
+    public void userChangeDeliveryAddress(){
+        Dimension screenSize = driver.manage().window().getSize();
+        int height = screenSize.getHeight();
+        int width = screenSize.getWidth();
+        int startX = (width / 2) + 30;
+        int startY = (int) (height * 0.8);  //
+        int endX = startX;// Start closer to the bottom (80% of screen height)
+        int endY = (int) (height * 0.2);  // End closer to the top (20% of screen height)
+        pause(1000);
+        while (!isElementDisplayed(changeAddressBtn)){
+            scroll(startX,startY,endX,endY);
+        }
+        changeAddressBtn.click();
+
+    }
+    @Override
+    public void userSetsPincode(String pincode){
+        enterPincodeElement.sendKeys(pincode);
     }
 
 

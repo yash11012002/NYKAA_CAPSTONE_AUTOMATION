@@ -6,4 +6,7 @@ public interface ItemDetailsPage {
     void userClicksOnProductImage();
     void userPerformZoomFunctionality();
     void userPerformSwipeFunctionality();
+    void userChangeDeliveryAddress();
+    void userSetsPincode(String pincode);
+
 }

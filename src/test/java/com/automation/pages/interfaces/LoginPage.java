@@ -7,4 +7,6 @@ public interface LoginPage {
     boolean verifySignInPageIsDisplayed();
 
     void doLogin(String phoneNumber);
+
+    public void userSkipsSignIn();
 }

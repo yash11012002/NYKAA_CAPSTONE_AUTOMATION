@@ -43,5 +43,9 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
         pause(20000);
         verifyBtn.click();
     }
+    @Override
+    public void userSkipsSignIn(){
+
+    }
 
 }

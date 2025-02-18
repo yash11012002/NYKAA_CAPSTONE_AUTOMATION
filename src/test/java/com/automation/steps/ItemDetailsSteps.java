@@ -1,5 +1,6 @@
 package com.automation.steps;
 
+import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,5 +28,15 @@ public class ItemDetailsSteps extends BaseSteps {
     @When("user swipes left on the product image")
     public void userSwipesLeftOnTheProductImage() {
         itemDetailsPage.userPerformSwipeFunctionality();
+    }
+
+    @When("user clicks on the Change Delivery Address option")
+    public void userClicksOnTheChangeDeliveryAddressOption() {
+        itemDetailsPage.userChangeDeliveryAddress();
+    }
+
+    @And("set new pincode {string}")
+    public void setNewPincode(String pincode) {
+        itemDetailsPage.userSetsPincode(ConfigReader.getConfigValue(pincode));
     }
 }

@@ -22,4 +22,12 @@ public class WebItemDetailsPage extends WebBasePage implements ItemDetailsPage {
     public void userPerformSwipeFunctionality() {
 
     }
+    @Override
+    public void userChangeDeliveryAddress(){
+
+    }
+    @Override
+    public void userSetsPincode(String pincode){
+
+    }
 }
