@@ -1,0 +1,80 @@
+City: Bengaluru
+
+Store Name: Nykaa On Trend - Mantri Square Mall
+Open : 11:00 AM - 09:30 PM
+Address: Unit No.UG-15A, Sampige Rd, Malleshwaram West, Bengaluru, Karnataka 560003
+
+Store Name: Nykaa Luxe - Forum Shantiniketan Mall
+Open : 11:00 AM - 09:30 PM
+Address: Unit No - 21 Whitefield Main road, Hoodi. Bengaluru-560067
+
+Store Name: Nykaa Luxe - Lavelle Road
+Open : 11:00 AM - 09:30 PM
+Address: Lavelle Road, 7, 100 Feet Ring Road, Near-Regent, Bengaluru, Karnataka 560001
+
+Store Name: Nykaa Luxe - 100 Feet Road, Indiranagar, Bengaluru
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Luxe, No. 383, Ground Floor, 100 Feet road Indiranagar, HAL 2nd Stage, Bangalore - 560038
+
+Store Name: Nykaa Kiosk - Forum Mall Koramangala
+Open : 11:00 AM - 09:30 PM
+Address: The Forum Mall, KGR 07, No. 21, Hosur RoadChikku Lakshmaiah Layout, Koramangala, Bengaluru, Karnataka 560095
+
+Store Name: Nykaa Kiosk - Vegac City
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa Kiosk, Vega City Mall, Blue Horizon Hotels Private Limited, No.172/1, Srinivas Industrial Estate, Bannerghatta Road, Bengaluru - 560076
+
+Store Name: Nykaa Luxe - Jayanagar
+Open : 10:00 AM - 08:00 PM
+Address: Nykaa Luxe Jayanagar Bangalore,FSN Brands Marketing Pvt.Ltd,396/85,Ground floor,11th main road,3rd block,Jayanagar,Bangalore-560011
+
+Store Name: Nykaa Luxe - Lulu Bangalore
+Open : 11:00 AM - 09:00 PM
+Address: Nykaa Luxe Lulu Global Mall,Gopalapura, Binnipete, Bengaluru,Karnataka
+
+Store Name: Nykaa On Trend - Nykaa On Trend HSR Layout Bangalore
+Open : 11:00 AM - 09:30 PM
+Address: Nykaa OnTrend, ground floor, Site 112, 27th Main road, 2nd sector, HSR Layout, Bangalore-560102
+
+Store Name: Nykaa On Trend - Nykaa On Trend Phoenix Marketcity Mall Bangalore
+Open : 10:00 AM - 09:30 PM
+Address: Nykaa On Trend, PMC Bangalore, Unit No. UG-39, Mahadevpura,Nr. Krishnarajapuram Flyover,Bengaluru - 560048
+
+City: Pune
+
+Store Name: Nykaa Luxe - Westend Mall
+Open : 11:00 AM - 09:30 PM
+Address: Ground Floor, Unit no: GS-09C, Aundh Pune - 411007 Ph: 022-22762722
+
+Store Name: Nykaa On Trend - SGS Mall
+Open : 09:00 AM - 07:00 PM
+Address: Nykaa On Trend, SGS Mall, Unit no. G - 06, 231, Moledina Rd, Camp, Pune, Maharashtra 411001
+
+Store Name: Nykaa On Trend - PMC Pune
+Open : 11:00 AM - 09:00 PM
+Address: Nykaa On Trend, UG - 52, Phoenix Market City, Survey No. 207, Viman Nagar Road Pune - 411014
+
+Store Name: Nykaa On Trend - Nykaa OT Pavillion Mall Pune
+Open : 10:30 AM - 09:30 PM
+Address: Nykaa On Trend, G-06, Senapati Bapat Rd, next to JW Marriott Hotel, Laxmi Society, Model Colony, Shivajinagar, Pune, Maharashtra 411016
+
+Store Name: Nykaa Luxe - Nykaa Luxe Koregaon Park
+Open : 10:00 AM - 09:30 PM
+Address: Nykaa Luxe, Ground Floor, Shop no.2 , Ganga Commerce, N Main Rd, Koregaon Park, Pune, Maharashtra 411001
+
+Store Name: Nykaa Luxe - Nykaa Luxe Phoenix Mall Of Millennium Pune
+Open : 11:00 AM - 10:00 PM
+Address: Nykaa Luxe, UG-21, Phoenix Mall of Millennium, Western Avenue, Shankar Kalat Nagar, Wakad, Pimpri-Chinchwad, Pune-Maharashtra, INDIA
+
+Store Name: Nykaa Kiosk - Nykaa Kiosk Season Mall Pune
+Open : 10:00 AM - 10:00 PM
+Address: Nykaa Kiosk, KG16a, Ground floor, Seasons Mall, Magarpatta City, Hadapsar, Pune, Maharashtra
+
+Store Name: Nykaa On Trend - Nykaa On Trend Amanora Mall Pune
+Open : 10:00 AM - 09:30 PM
+Address: Nykaa On Trend Store No. WB-GF-16A, Ground Floor, West Block of the Mall, Amanora Mall, Mundhwa - Kharadi Rd, Amanora Park Town, Hadapsar, Pune 411028, Maharashtra
+
+Store Name: Nykaa Kiosk - Nykaa Kiosk Phoenix Millenium Mall Pune
+Open : 10:00 AM - 10:00 PM
+Address: OPR (F3) B on the First Floor,S No. 132, 23, Pune - Bangalore Highway, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057
+

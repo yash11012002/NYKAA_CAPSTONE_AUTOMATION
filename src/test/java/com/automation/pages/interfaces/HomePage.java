@@ -7,4 +7,5 @@ public interface HomePage {
     boolean verifyUserSuccessfullyLoggedIn();
 
     void userSearchProduct(String productName);
+    void clickOnStoreAndEventsBtn();
 }

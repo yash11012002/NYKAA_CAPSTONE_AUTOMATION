@@ -16,6 +16,9 @@ public class WebHomePage extends WebBasePage implements HomePage {
     @FindBy(xpath = "//input[@name='search-suggestions-nykaa']")
     WebElement searchInput;
 
+    @FindBy(xpath = "//a//span[@class='ts-text' and contains(text(),'Store')]")
+    WebElement storeAndEvents;
+
     @Override
     public boolean isHomePageDisplayed() {
         return isElementPresent(navigationBar);
@@ -30,5 +33,10 @@ public class WebHomePage extends WebBasePage implements HomePage {
     public void userSearchProduct(String productName) {
         searchInput.sendKeys(productName);
         searchInput.sendKeys(Keys.ENTER);
+    }
+
+    @Override
+    public void clickOnStoreAndEventsBtn() {
+        storeAndEvents.click();
     }
 }

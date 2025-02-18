@@ -45,4 +45,9 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
         selectFromSuggestion.click();
 
     }
+
+    @Override
+    public void clickOnStoreAndEventsBtn() {
+        //This is implemented in Web Application
+    }
 }

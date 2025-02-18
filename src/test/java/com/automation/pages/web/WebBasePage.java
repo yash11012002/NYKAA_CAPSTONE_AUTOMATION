@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Set;
+
 public class WebBasePage {
     static WebDriver driver;
 
@@ -28,6 +30,19 @@ public class WebBasePage {
             Thread.sleep(millisec);
         }catch (Exception e){
             System.out.println("Exception: "+e);
+        }
+    }
+
+    public void switchToNewTab() {
+        String currentWindowHandle = driver.getWindowHandle();
+
+        Set<String> allWindowHandles = driver.getWindowHandles();
+
+        for (String handle : allWindowHandles) {
+            if (!handle.equals(currentWindowHandle)) {
+                driver.switchTo().window(handle);
+                break;
+            }
         }
     }
 }

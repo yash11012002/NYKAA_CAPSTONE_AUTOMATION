@@ -30,4 +30,8 @@ public class HomeSteps extends BaseSteps {
     public void userSearchForProducts(String productsName) {
         homePage.userSearchProduct(productsName);
     }
+    @When("user clicks on store locator tab")
+    public void userClicksOnStoreLocatorTab() {
+        homePage.clickOnStoreAndEventsBtn();
+    }
 }

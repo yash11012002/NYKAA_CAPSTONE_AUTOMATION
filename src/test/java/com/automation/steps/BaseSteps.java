@@ -12,6 +12,8 @@ public class BaseSteps {
     ProductListing productListing;
     FilterPage filterPage;
     ItemDetailsPage itemDetailsPage;
+    StoreLocatorPage storeLocatorPage;
+
     public BaseSteps() {
         if (ConfigReader.getConfigValue("platform").equals("web")) {
             loginPage = new WebLoginPage();
@@ -19,12 +21,14 @@ public class BaseSteps {
             productListing=new WebProductListingPage();
             filterPage=new WebFilterPage();
             itemDetailsPage=new WebItemDetailsPage();
+            storeLocatorPage = new WebStoreLocatorPage();
         } else {
             loginPage = new AndroidLoginPage();
             homePage = new AndroidHomePage();
             productListing=new AndroidProductListingPage();
             filterPage=new AndroidFilterPage();
             itemDetailsPage=new AndroidItemDetailsPage();
+            storeLocatorPage= new WebStoreLocatorPage();
         }
     }
 }
