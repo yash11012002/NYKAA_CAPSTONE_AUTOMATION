@@ -28,6 +28,21 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
     @FindBy(id = "com.fsn.nykaa:id/tv_hint_label")
     WebElement enterPincodeElement;
 
+    @FindBy(id = "com.fsn.nykaa:id/rv_option_list")
+    WebElement sizeDiv;
+
+    @FindBy(xpath = "(//androidx.appcompat.widget.LinearLayoutCompat[@resource-id=\"com.fsn.nykaa:id/sizeAndPriceLayout\"])[2]")
+    WebElement selecctSize;
+
+    @FindBy(id = "com.fsn.nykaa:id/ll_add_to_bag")
+    WebElement addToBag;
+
+    @FindBy(id = "com.fsn.nykaa:id/badge_count")
+    WebElement cartBadgeCount;
+
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/actionbar_icon\"])[3]")
+    WebElement cartIcon;
+
     @Override
     public boolean verifyItemsDetailsPageIsDisplayed() {
         return productIcon.isDisplayed();
@@ -54,13 +69,14 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
         int startY = height / 2;  //
         int endX = (width / 2) - 350;// Start closer to the bottom (80% of screen height)
         int endY = startY;  // End closer to the top (20% of screen height)
-        while (!isElementDisplayed(stoppingCondition)){
-            scroll(startX,startY,endX,endY);
+        while (!isElementDisplayed(stoppingCondition)) {
+            scroll(startX, startY, endX, endY);
         }
 
     }
+
     @Override
-    public void userChangeDeliveryAddress(){
+    public void userChangeDeliveryAddress() {
         Dimension screenSize = driver.manage().window().getSize();
         int height = screenSize.getHeight();
         int width = screenSize.getWidth();
@@ -69,15 +85,51 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
         int endX = startX;// Start closer to the bottom (80% of screen height)
         int endY = (int) (height * 0.2);  // End closer to the top (20% of screen height)
         pause(1000);
-        while (!isElementDisplayed(changeAddressBtn)){
-            scroll(startX,startY,endX,endY);
+        while (!isElementDisplayed(changeAddressBtn)) {
+            scroll(startX, startY, endX, endY);
         }
         changeAddressBtn.click();
 
     }
+
     @Override
-    public void userSetsPincode(String pincode){
+    public void userSetsPincode(String pincode) {
         enterPincodeElement.sendKeys(pincode);
+    }
+
+
+    @Override
+    public void selectProductSize() {
+        Dimension screenSize = driver.manage().window().getSize();
+        int height = screenSize.getHeight();
+        int width = screenSize.getWidth();
+        int startX = (width / 2) + 30;
+        int startY = (int) (height * 0.8);  //
+        int endX = startX;// Start closer to the bottom (80% of screen height)
+        int endY = (int) (height * 0.2);  // End closer to the top (20% of screen height)
+        pause(1000);
+        while (!isElementDisplayed(sizeDiv)) {
+            scroll(startX, startY, endX, endY);
+        }
+        selecctSize.click();
+
+    }
+
+    @Override
+    public void userAddsProductInCart() {
+        addToBag.click();
+    }
+
+    @Override
+    public int verifyItemAddedInCart() {
+        String itemCount = cartBadgeCount.getText();
+        int itemCountInt = Integer.parseInt(itemCount);
+        return itemCountInt;
+    }
+
+    @Override
+    public void userClicsOnCartIcon() {
+        cartIcon.click();
     }
 
 

@@ -13,6 +13,8 @@ public class BaseSteps {
     FilterPage filterPage;
     ItemDetailsPage itemDetailsPage;
     StoreLocatorPage storeLocatorPage;
+    CartPage cartPage;
+    OfferPage offerPage;
 
     public BaseSteps() {
         if (ConfigReader.getConfigValue("platform").equals("web")) {
@@ -22,13 +24,17 @@ public class BaseSteps {
             filterPage=new WebFilterPage();
             itemDetailsPage=new WebItemDetailsPage();
             storeLocatorPage = new WebStoreLocatorPage();
+            cartPage=new WebCartPage();
+            offerPage=new WebOfferPage();
         } else {
             loginPage = new AndroidLoginPage();
             homePage = new AndroidHomePage();
             productListing=new AndroidProductListingPage();
             filterPage=new AndroidFilterPage();
             itemDetailsPage=new AndroidItemDetailsPage();
-            storeLocatorPage= new WebStoreLocatorPage();
+            storeLocatorPage= new AndroidStoreLocatorPage();
+            cartPage=new AndroidCartPage();
+            offerPage=new AndroidOfferPage();
         }
     }
 }

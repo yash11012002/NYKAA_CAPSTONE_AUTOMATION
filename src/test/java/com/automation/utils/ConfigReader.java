@@ -24,4 +24,8 @@ public class ConfigReader {
     public static void setConfigValue(String key,String value){
         properties.setProperty(key, value);
     }
+    public static int getConfigIntValue(String key) {
+        String value = properties.getProperty(key);
+        return Integer.parseInt(value);  // Converts the string to integer
+    }
 }

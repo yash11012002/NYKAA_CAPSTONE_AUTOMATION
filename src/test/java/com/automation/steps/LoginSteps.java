@@ -6,7 +6,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 
 
@@ -32,4 +31,6 @@ public class LoginSteps extends BaseSteps {
     public void userSkipsSignIn() {
         loginPage.userSkipsSignIn();
     }
+
+
 }

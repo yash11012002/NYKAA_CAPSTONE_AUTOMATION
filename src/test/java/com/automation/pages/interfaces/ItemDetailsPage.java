@@ -8,5 +8,9 @@ public interface ItemDetailsPage {
     void userPerformSwipeFunctionality();
     void userChangeDeliveryAddress();
     void userSetsPincode(String pincode);
+    void selectProductSize();
+    void userAddsProductInCart();
+    int verifyItemAddedInCart();
+    void userClicsOnCartIcon();
 
 }

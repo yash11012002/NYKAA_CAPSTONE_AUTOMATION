@@ -1,6 +1,7 @@
 package com.automation.pages.web;
 
 import com.automation.pages.interfaces.ItemDetailsPage;
+import org.openqa.selenium.Dimension;
 
 public class WebItemDetailsPage extends WebBasePage implements ItemDetailsPage {
 
@@ -30,4 +31,21 @@ public class WebItemDetailsPage extends WebBasePage implements ItemDetailsPage {
     public void userSetsPincode(String pincode){
 
     }
+
+    @Override
+    public void selectProductSize(){
+
+
+    }
+    @Override
+    public void userAddsProductInCart(){
+    }
+    @Override
+    public int verifyItemAddedInCart(){
+       return 0;
+    }
+    @Override
+    public void userClicsOnCartIcon(){
+    }
+
 }
