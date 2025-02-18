@@ -40,4 +40,9 @@ public class CartSteps extends BaseSteps {
     public void theUserProceedsToThePaymentSection() {
         cartPage.userClicksOnProceedToPay();
     }
+
+    @Then("verify same product added in cart")
+    public void verifySameProductAddedInCart() {
+        Assert.assertTrue(cartPage.verifyCorrectOrderAddedInCart());
+    }
 }

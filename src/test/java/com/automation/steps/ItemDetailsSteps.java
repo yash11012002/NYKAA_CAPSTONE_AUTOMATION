@@ -53,6 +53,7 @@ public class ItemDetailsSteps extends BaseSteps {
     @Then("the system verifies that the item was successfully added to the cart")
     public void theSystemVerifiesThatTheItemWasSuccessfullyAddedToTheCart() {
         Assert.assertEquals(itemDetailsPage.verifyItemAddedInCart(),1);
+
     }
 
     @When("the user clicks on the cart icon")

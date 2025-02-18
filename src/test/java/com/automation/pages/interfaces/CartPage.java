@@ -8,4 +8,6 @@ public interface CartPage {
     void userClicksOnPriceDetailsIcon();
     boolean verifyPriceDetails();
     void userClicksOnProceedToPay();
+    boolean isProductPresentInCart();
+    boolean verifyCorrectOrderAddedInCart();
 }

@@ -1,9 +1,12 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.ItemDetailsPage;
+import com.automation.utils.ConfigReader;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.net.IDN;
 
 public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetailsPage {
 
@@ -42,6 +45,9 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
 
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/actionbar_icon\"])[3]")
     WebElement cartIcon;
+
+    @FindBy(id = "com.fsn.nykaa:id/tv_brands_title")
+    WebElement productTitle;
 
     @Override
     public boolean verifyItemsDetailsPageIsDisplayed() {
@@ -117,7 +123,9 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
 
     @Override
     public void userAddsProductInCart() {
+        ConfigReader.setConfigValue("product.title",productTitle.getText());
         addToBag.click();
+//        ConfigReader.setConfigValue("product.title",productTitle.getText());
     }
 
     @Override

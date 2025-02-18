@@ -15,6 +15,10 @@ public class AndroidOfferPage extends AndroidBasePage implements OfferPage {
     @FindBy(id = "com.fsn.nykaa:id/cta")
     WebElement viewBag;
 
+    @FindBy(id = "com.truecaller:id/confirm")
+    WebElement continueWithNumber;
+
+
     @Override
     public boolean verifyIsOfferPageIsDisplayed(){
         return viewBag.isDisplayed();
@@ -22,10 +26,9 @@ public class AndroidOfferPage extends AndroidBasePage implements OfferPage {
 
     @Override
     public void userApplyCouponsOffers(){
-        if(isElementDisplayed(couponCollectTab)){
-            couponCollectTab.click();
-        }
-        confirmOffer.click();
+        //continueWithNumber.click();
+       // pause(2000);
+
     }
     @Override
     public void userClicksViewBag(){

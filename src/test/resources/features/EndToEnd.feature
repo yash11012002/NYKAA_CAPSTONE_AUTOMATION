@@ -12,6 +12,7 @@ Feature: Verify End To End Feature
     And the user adds 1 the item to the cart
     Then the system verifies that the item was successfully added to the cart
     When the user clicks on the cart icon
+    Then verify same product added in cart
     And the user sets the quantity
     Then the system verifies that the correct quantity is displayed
     When the user checks for available coupons and bank offers

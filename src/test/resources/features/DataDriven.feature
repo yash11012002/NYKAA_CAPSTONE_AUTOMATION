@@ -4,7 +4,7 @@ Feature: Verify Product Search Functionality
   Scenario Outline: Verify user can search for products successfully
     Given user opens application
     Then verify user is on homepage
-    When user search for products "<product.name>"
+    When user search for product "<product.name>"
     Then verify product listing page is displayed
     When user click on filter tab
     Then verify filter page is displayed
