@@ -26,5 +26,8 @@ public class HomeSteps extends BaseSteps {
     }
 
 
-
+    @When("user search for products {string}")
+    public void userSearchForProducts(String productsName) {
+        homePage.userSearchProduct(productsName);
+    }
 }

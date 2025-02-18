@@ -3,9 +3,9 @@ Feature: Verify Filters and Product Selection
 
   Scenario: Verify user applies filters and views filtered products
     Given user opens application
-#    Then verify user is on sign-in page
-#    When user enters mobile number as "mobile.number"
-#    Then verify user is successfully logged in
+    Then verify user is on sign-in page
+    When user enters mobile number as "mobile.number"
+    Then verify user is successfully logged in
     And verify user is on homepage
     When user search for product "product.name"
     Then verify product listing page is displayed
