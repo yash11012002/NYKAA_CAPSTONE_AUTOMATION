@@ -27,6 +27,6 @@ public class WebFilterPage extends WebBasePage implements FilterPage {
     private void applyFilter(String filter){
         searchInput.clear();
         searchInput.sendKeys(filter);
-        driver.findElement(By.xpath("//div[@class='control-indicator checkbox']")).click();
+        driver.findElement(By.xpath("//div[@class='control-value']/span[@class='title']")).click();
     }
 }

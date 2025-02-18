@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.URL;
@@ -16,7 +17,11 @@ public class DriverManager {
 
     public static void createDriver(){
         if(ConfigReader.getConfigValue("platform").equals("web")){
-            driver = new ChromeDriver();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--disable-blink-features=AutomationControlled");
+            options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+            options.setExperimentalOption("useAutomationExtension", false);
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
         } else if (ConfigReader.getConfigValue("platform").equals("mobile")) {
             DesiredCapabilities capabilities = new DesiredCapabilities();
