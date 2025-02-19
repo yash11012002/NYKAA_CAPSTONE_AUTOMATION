@@ -12,11 +12,5 @@ public interface HomePage {
 
     void clickOnGiftCardTab();
 
-    boolean isProductOutOfStock();
 
-    void clickOnNotifyBtn();
-
-    void proceedForNotify();
-
-    boolean isAlertMsgDisplayed();
 }

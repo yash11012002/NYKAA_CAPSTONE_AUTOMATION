@@ -28,7 +28,25 @@ public class ProductListingSteps extends BaseSteps {
         productListing.userClickOnFirstProduct();
     }
 
+    @When("user checks for out-of-stock products")
+    public void userChecksForOutOfStockProducts() {
+        Assert.assertTrue(productListing.isProductOutOfStock());
+    }
 
+    @And("user clicks on the notify button")
+    public void userClicksOnTheNotifyButton() {
+        productListing.clickOnNotifyBtn();
+    }
+
+    @When("user enters the email address and clicks on the proceed button")
+    public void userEntersTheEmailAddressAndClicksOnTheProceedButton() {
+        productListing.proceedForNotify();
+    }
+
+    @Then("verify alert message is displayed")
+    public void verifyAlertMessageIsDisplayed() {
+        Assert.assertTrue(productListing.isAlertMsgDisplayed());
+    }
 
 
 }

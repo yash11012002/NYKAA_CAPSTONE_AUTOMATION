@@ -3,6 +3,7 @@ package com.automation.pages.web;
 import com.automation.pages.interfaces.ProductListing;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,6 +15,18 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     WebElement sortBtn;
 
     List<WebElement> productTitles;
+
+    @FindBy(xpath = "//span[@class='css-lg5xc9']")
+    List<WebElement> outOfStockProducts;
+
+    @FindBy(xpath = "//span[@class='css-lg5xc9']/../../..//button[@class='fill-bg css-j1ays8']")
+    WebElement notifyBtn;
+
+    @FindBy(xpath = "//form[@class='css-1j7pnn7']/input[@placeholder='Your Email' and @class='input']\n")
+    WebElement notifyEmail;
+
+    @FindBy(xpath = "//div[@class=\"css-vwa1e2\"]//button[@type='submit']")
+    WebElement proceedBtn;
 
     @Override
     public boolean isProductListingPageDisplayed() {
@@ -42,5 +55,28 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     @Override
     public void userClickOnFirstProduct() {
 
+    }
+
+    @Override
+    public boolean isProductOutOfStock() {
+        return (!outOfStockProducts.isEmpty());
+    }
+
+    @Override
+    public void clickOnNotifyBtn() {
+        ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight / 2);");
+        actions.moveToElement(driver.findElement(By.xpath("//span[@class='css-lg5xc9']/../../.."))).perform();
+        notifyBtn.click();
+    }
+
+    @Override
+    public void proceedForNotify() {
+        notifyEmail.sendKeys("abc@gmail.com");
+        proceedBtn.click();
+    }
+
+    @Override
+    public boolean isAlertMsgDisplayed() {
+        return driver.findElement(By.xpath("//div[@class='body' and contains(text(),\"subscribed\")]")).isDisplayed();
     }
 }

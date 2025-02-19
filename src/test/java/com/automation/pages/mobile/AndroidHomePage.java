@@ -55,25 +55,5 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
         //This function is implemented in Web
     }
 
-    @Override
-    public boolean isProductOutOfStock() {
-        //This function is implemented in Web
-        return true;
-    }
 
-    @Override
-    public void clickOnNotifyBtn() {
-        //This function is implemented in Web
-    }
-
-    @Override
-    public void proceedForNotify() {
-        //This function is implemented in Web
-    }
-
-    @Override
-    public boolean isAlertMsgDisplayed() {
-        //This function is implemented in Web
-        return true;
-    }
 }

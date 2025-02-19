@@ -34,23 +34,5 @@ public class HomeSteps extends BaseSteps {
         homePage.clickOnGiftCardTab();
     }
 
-    @When("user checks for out-of-stock products")
-    public void userChecksForOutOfStockProducts() {
-        Assert.assertTrue(homePage.isProductOutOfStock());
-    }
 
-    @And("user clicks on the notify button")
-    public void userClicksOnTheNotifyButton() {
-        homePage.clickOnNotifyBtn();
-    }
-
-    @When("user enters the email address and clicks on the proceed button")
-    public void userEntersTheEmailAddressAndClicksOnTheProceedButton() {
-        homePage.proceedForNotify();
-    }
-
-    @Then("verify alert message is displayed")
-    public void verifyAlertMessageIsDisplayed() {
-        Assert.assertTrue(homePage.isAlertMsgDisplayed());
-    }
 }
