@@ -11,6 +11,7 @@ public interface ItemDetailsPage {
     void selectProductSize();
     void userAddsProductInCart();
     int verifyItemAddedInCart();
-    void userClicsOnCartIcon();
+    void userClicksOnCartIcon();
+    boolean verifyCity(String cityName);
 
 }

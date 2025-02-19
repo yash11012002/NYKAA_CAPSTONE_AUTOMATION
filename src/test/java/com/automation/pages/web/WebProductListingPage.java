@@ -53,11 +53,6 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     }
 
     @Override
-    public void userClickOnFirstProduct() {
-
-    }
-
-    @Override
     public boolean isProductOutOfStock() {
         return (!outOfStockProducts.isEmpty());
     }
@@ -78,5 +73,11 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     @Override
     public boolean isAlertMsgDisplayed() {
         return driver.findElement(By.xpath("//div[@class='body' and contains(text(),\"subscribed\")]")).isDisplayed();
+    }
+
+    @Override
+    public void userClickOnFirstProduct() {
+        productTitles = driver.findElements(By.xpath("//div[@class='css-1rd7vky']/div[@class='css-xrzmfa']"));
+        productTitles.get(0).click();
     }
 }

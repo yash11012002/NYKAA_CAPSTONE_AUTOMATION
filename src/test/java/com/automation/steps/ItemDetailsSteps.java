@@ -58,6 +58,17 @@ public class ItemDetailsSteps extends BaseSteps {
 
     @When("the user clicks on the cart icon")
     public void theUserClicksOnTheCartIcon() {
-        itemDetailsPage.userClicsOnCartIcon();
+        itemDetailsPage.userClicksOnCartIcon();
     }
+
+    @When("navigates to deliver using pinCode and enters the {string}")
+    public void navigatesToDeliverUsingPinCodeAndEntersThe(String pinCode) {
+        itemDetailsPage.userSetsPincode(pinCode);
+    }
+
+    @Then("verify that the location displayed corresponds to the {string}")
+    public void verifyThatTheLocationDisplayedCorrespondsToThe(String cityName) {
+        Assert.assertTrue(itemDetailsPage.verifyCity(cityName));
+    }
+
 }

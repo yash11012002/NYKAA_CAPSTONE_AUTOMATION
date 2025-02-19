@@ -136,8 +136,13 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
     }
 
     @Override
-    public void userClicsOnCartIcon() {
+    public void userClicksOnCartIcon() {
         cartIcon.click();
+    }
+
+    @Override
+    public boolean verifyCity(String cityName) {
+        return true;
     }
 
 
