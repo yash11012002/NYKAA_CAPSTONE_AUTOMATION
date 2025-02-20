@@ -14,5 +14,13 @@ public interface HomePage {
 
     void userClicksOnCategoryTab();
 
+    void clickOnProfileSection();
+
+    void clickOnBagIcon();
+
+    void openWishListTab();
+
+    void clickOnLogOutBtn();
+
 
 }

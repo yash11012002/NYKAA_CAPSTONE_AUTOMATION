@@ -63,4 +63,24 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
         categoryTab.click();
     }
 
+    @Override
+    public void clickOnProfileSection() {
+
+    }
+
+    @Override
+    public void clickOnBagIcon() {
+
+    }
+
+    @Override
+    public void openWishListTab() {
+
+    }
+
+    @Override
+    public void clickOnLogOutBtn() {
+
+    }
+
 }

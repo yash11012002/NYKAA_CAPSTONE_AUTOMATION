@@ -10,4 +10,9 @@ public interface CartPage {
     void userClicksOnProceedToPay();
     boolean isProductPresentInCart();
     boolean verifyCorrectOrderAddedInCart();
+    boolean isCartPageDisplayed();
+    boolean cartPersistency();
+    void deleteFromCart();
+    boolean isProductDeleted();
+    void navigateBack();
 }

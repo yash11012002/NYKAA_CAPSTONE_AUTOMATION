@@ -48,6 +48,24 @@ public class ProductListingSteps extends BaseSteps {
         Assert.assertTrue(productListing.isAlertMsgDisplayed());
     }
 
+    @When("user adds the first product to bag")
+    public void userAddsTheFirstProductToBag() {
+        productListing.addFirstProductToBag();
+    }
 
+    @And("verify the product is successfully added to the bag")
+    public void verifyTheProductIsSuccessfullyAddedToTheBag() {
+        Assert.assertTrue(productListing.isProductAddedToBag());
+    }
+
+    @Then("user adds the first product to the wishlist")
+    public void userAddsTheFirstProductToTheWishlist() {
+        productListing.addToWishList();
+    }
+
+    @And("verify that the product is successfully added to the wishlist")
+    public void verifyThatTheProductIsSuccessfullyAddedToTheWishlist() {
+        Assert.assertTrue(productListing.isProductAddedToWishList());
+    }
 
 }

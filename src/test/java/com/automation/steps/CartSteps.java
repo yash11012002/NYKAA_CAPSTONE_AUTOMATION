@@ -45,4 +45,30 @@ public class CartSteps extends BaseSteps {
     public void verifySameProductAddedInCart() {
         Assert.assertTrue(cartPage.verifyCorrectOrderAddedInCart());
     }
+
+    @Then("verify cart page is displayed")
+    public void verifyCartPageIsDisplayed() {
+        Assert.assertTrue(cartPage.isCartPageDisplayed());
+    }
+
+    @Then("verify cart persistency")
+    public void verifyCartPersistency() {
+        homePage.clickOnBagIcon();
+        Assert.assertTrue(cartPage.cartPersistency());
+    }
+
+    @And("user deletes the product from the bag")
+    public void userDeletesTheProductFromTheBag() {
+        cartPage.deleteFromCart();
+    }
+
+    @Then("verify that the product has been successfully removed from the bag")
+    public void verifyThatTheProductHasBeenSuccessfullyRemovedFromTheBag() {
+        Assert.assertTrue(cartPage.isProductDeleted());
+    }
+
+    @When("user navigates back")
+    public void userNavigatesBack() {
+        cartPage.navigateBack();
+    }
 }

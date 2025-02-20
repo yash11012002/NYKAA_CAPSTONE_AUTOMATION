@@ -13,6 +13,9 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
     @FindBy(xpath = "//input[@name='emailMobile']")
     WebElement mobileNumberInput;
 
+    @FindBy(xpath = "//span[@class='css-7yndtp']")
+    WebElement alternateMobileNumberInput;
+
     @FindBy(xpath = "//button[contains(text(), 'Sign in with Mobile / Email')]")
     WebElement signInUsingMobile;
 
@@ -21,6 +24,9 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
 
     @FindBy(xpath = "//button[@class='button big fill full ']")
     WebElement verifyBtn;
+
+    @FindBy(xpath = "//button[@class='css-15q5a8e']")
+    WebElement getOtpBtn;
 
     @Override
     public void openApplication(){
@@ -36,13 +42,22 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
     public void doLogin(String phoneNumber){
         signBtn.click();
         signInUsingMobile.click();
-        pause(1000);
-        mobileNumberInput.sendKeys(phoneNumber);
         pause(2000);
-        proceedBtn.click();
-        pause(20000);
-        verifyBtn.click();
+        String currentUrl = driver.getCurrentUrl();
+        System.out.println(currentUrl);
+        if(currentUrl.contains("ptype=auth")){
+            mobileNumberInput.sendKeys(phoneNumber);
+            proceedBtn.click();
+            pause(20000);
+            verifyBtn.click();
+        }
+        else {
+            alternateMobileNumberInput.sendKeys(phoneNumber);
+            getOtpBtn.click();
+            pause(20000);
+        }
     }
+
     @Override
     public void userSkipsSignIn(){
 

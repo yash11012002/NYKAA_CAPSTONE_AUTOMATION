@@ -109,4 +109,24 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
         return true;
     }
 
+    @Override
+    public void addFirstProductToBag() {
+
+    }
+
+    @Override
+    public boolean isProductAddedToBag() {
+        return false;
+    }
+
+    @Override
+    public void addToWishList() {
+
+    }
+
+    @Override
+    public boolean isProductAddedToWishList() {
+        return false;
+    }
+
 }

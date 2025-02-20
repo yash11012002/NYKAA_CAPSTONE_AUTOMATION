@@ -26,6 +26,10 @@ public class LoginSteps extends BaseSteps {
         loginPage.doLogin(ConfigReader.getConfigValue(phoneNumber));
     }
 
+    @Then("verify user successfully logged out")
+    public void verifyUserSuccessfullyLoggedOut() {
+        Assert.assertTrue(loginPage.verifySignInPageIsDisplayed());
+    }
 
     @When("user skips sign in")
     public void userSkipsSignIn() {

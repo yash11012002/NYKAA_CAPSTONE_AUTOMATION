@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import javax.xml.xpath.XPath;
+import java.util.List;
 
 public class WebCartPage extends WebBasePage implements CartPage {
 
@@ -120,5 +121,48 @@ public class WebCartPage extends WebBasePage implements CartPage {
     @Override
     public boolean verifyCorrectOrderAddedInCart() {
         return true;
+    }
+
+    @Override
+    public boolean isCartPageDisplayed() {
+        WebElement iframeElement = driver.findElement(By.cssSelector("iframe.css-wlxg94"));
+        driver.switchTo().frame(iframeElement);
+        return isElementPresent( driver.findElement(By.xpath("//p[@class='css-1v1x2g9 e171rb9k0']")));
+    }
+
+    @Override
+    public boolean cartPersistency() {
+        WebElement iframeElement = driver.findElement(By.cssSelector("iframe.css-wlxg94"));
+        driver.switchTo().frame(iframeElement);
+        boolean result = ConfigReader.getConfigValue("productDetail").contains(driver.findElement(By.xpath("//span[@data-test-id='product-name']")).getText());
+        List<WebElement> productsInCart = driver.findElements(By.xpath("//div[@class='product-info css-khp1u e1whhlt0']"));
+        boolean result_new = !productsInCart.isEmpty();
+        return result && result_new;
+    }
+
+    @Override
+    public void deleteFromCart() {
+        WebElement iframeElement = driver.findElement(By.cssSelector("iframe.css-wlxg94"));
+        driver.switchTo().frame(iframeElement);
+
+        System.out.println(isElementPresent(driver.findElement(By.xpath("//button[@data-test-id='product-remove']"))));
+
+        WebElement deleteBtn = driver.findElement(By.xpath("//button[@data-test-id='product-remove']"));
+        deleteBtn.click();
+        driver.findElement(By.xpath("//div[@class='css-n3w7xh es81o671']/button[@class='css-532ftx e8tshxd1']")).click();
+    }
+
+    @Override
+    public boolean isProductDeleted() {
+//        WebElement iframeElement = driver.findElement(By.cssSelector("iframe.css-wlxg94"));
+//        driver.switchTo().frame(iframeElement);
+        return isElementPresent(driver.findElement(By.xpath("//p[@class='css-gwu2a1 e171rb9k0']")));
+    }
+
+    @Override
+    public void navigateBack() {
+//        driver.navigate().back();
+        driver.findElement(By.xpath("//span[@class='css-175whwo ehes2bo0']")).click();
+        driver.switchTo().defaultContent();
     }
 }

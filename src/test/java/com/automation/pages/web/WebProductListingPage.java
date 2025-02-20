@@ -28,6 +28,13 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     @FindBy(xpath = "//div[@class=\"css-vwa1e2\"]//button[@type='submit']")
     WebElement proceedBtn;
 
+    @FindBy(xpath = "//span[@class='btn-text']")
+    WebElement addToBag;
+
+    @FindBy(xpath = "//button[@class='wishlist_button_text css-a66yfw']")
+    WebElement addToWishListBtn;
+
+
     @Override
     public boolean isProductListingPageDisplayed() {
         return isElementPresent(sortBtn);
@@ -79,5 +86,29 @@ public class WebProductListingPage extends WebBasePage implements ProductListing
     public void userClickOnFirstProduct() {
         productTitles = driver.findElements(By.xpath("//div[@class='css-1rd7vky']/div[@class='css-xrzmfa']"));
         productTitles.get(0).click();
+    }
+
+    @Override
+    public void addFirstProductToBag() {
+        productTitles = driver.findElements(By.xpath("//div[@class='css-1rd7vky']/div[@class='css-xrzmfa']"));
+        actions.moveToElement(productTitles.get(0)).perform();
+        addToBag.click();
+    }
+
+    @Override
+    public boolean isProductAddedToBag() {
+        return isElementPresent(driver.findElement(By.xpath("//div[@id='view_bag_snackbar']")));
+    }
+
+    @Override
+    public void addToWishList() {
+        productTitles = driver.findElements(By.xpath("//div[@class='css-1rd7vky']/div[@class='css-xrzmfa']"));
+        actions.moveToElement(productTitles.get(0)).perform();
+        addToWishListBtn.click();
+    }
+
+    @Override
+    public boolean isProductAddedToWishList() {
+        return isElementPresent(driver.findElement(By.xpath("//div[@class='container active']")));
     }
 }

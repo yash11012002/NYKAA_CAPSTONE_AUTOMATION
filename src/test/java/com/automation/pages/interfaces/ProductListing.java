@@ -13,4 +13,12 @@ public interface ProductListing {
     void proceedForNotify();
 
     boolean isAlertMsgDisplayed();
+
+    void addFirstProductToBag();
+
+    boolean isProductAddedToBag();
+
+    void addToWishList();
+
+    boolean isProductAddedToWishList();
 }

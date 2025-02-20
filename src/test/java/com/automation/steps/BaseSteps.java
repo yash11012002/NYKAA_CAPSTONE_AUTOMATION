@@ -18,6 +18,8 @@ public class BaseSteps {
     GiftCardPage giftCardPage;
     CategoryPage categoryPage;
     BestSellerProductPage bestSellerProductPage;
+    ProfilePage profilePage;
+    WishListPage wishListPage;
 
     public BaseSteps() {
         if (ConfigReader.getConfigValue("platform").equals("web")) {
@@ -32,6 +34,8 @@ public class BaseSteps {
             giftCardPage = new WebGiftCardPage();
             categoryPage=new WebCategoryPage();
             bestSellerProductPage=new WebBestSellerProductPage();
+            profilePage = new WebProfilePage();
+            wishListPage = new WebWishListPage();
 
         } else {
             loginPage = new AndroidLoginPage();
@@ -45,6 +49,8 @@ public class BaseSteps {
             giftCardPage = new AndroidGiftCardPage();
             categoryPage=new AndroidCategoryPage();
             bestSellerProductPage=new AndroidBestSellerProductPage();
+            profilePage = new AndroidProfilePage();
+            wishListPage = new AndroidWishListPage();
         }
     }
 }

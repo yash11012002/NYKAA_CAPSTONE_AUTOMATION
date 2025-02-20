@@ -34,6 +34,26 @@ public class HomeSteps extends BaseSteps {
         homePage.clickOnGiftCardTab();
     }
 
+    @When("user navigates to the profile section")
+    public void userNavigatesToTheProfileSection() {
+        homePage.clickOnProfileSection();
+    }
+
+    @When("user navigates to the Bag")
+    public void userNavigatesToTheBag() {
+        homePage.clickOnBagIcon();
+    }
+
+    @When("user navigates to the wishlist")
+    public void userNavigatesToTheWishlist() {
+        homePage.openWishListTab();
+    }
+
+    @When("user logout")
+    public void userLogout() {
+        homePage.clickOnLogOutBtn();
+    }
+
 
     @And("user clicks on categories tab")
     public void userClicksOnCategoriesTab() {

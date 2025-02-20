@@ -112,4 +112,29 @@ public class AndroidCartPage extends AndroidBasePage implements CartPage {
     public boolean verifyCorrectOrderAddedInCart() {
         return isProductPresentInCart();
     }
+
+    @Override
+    public boolean isCartPageDisplayed() {
+        return false;
+    }
+
+    @Override
+    public boolean cartPersistency() {
+        return false;
+    }
+
+    @Override
+    public void deleteFromCart() {
+
+    }
+
+    @Override
+    public boolean isProductDeleted() {
+        return false;
+    }
+
+    @Override
+    public void navigateBack() {
+
+    }
 }
