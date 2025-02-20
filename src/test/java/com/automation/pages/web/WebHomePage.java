@@ -53,5 +53,9 @@ public class WebHomePage extends WebBasePage implements HomePage {
         giftCardTab.click();
     }
 
+    @Override
+    public void userClicksOnCategoryTab(){
+    }
+
 
 }

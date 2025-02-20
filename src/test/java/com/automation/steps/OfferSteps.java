@@ -22,4 +22,6 @@ public class OfferSteps extends BaseSteps{
     public void theUserClicksOnViewBag() {
         offerPage.userClicksViewBag();
     }
+
+
 }

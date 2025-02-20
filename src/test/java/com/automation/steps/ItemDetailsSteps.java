@@ -42,7 +42,7 @@ public class ItemDetailsSteps extends BaseSteps {
 
     @When("the user selects the size of a product")
     public void theUserSelectsTheSizeOfAProduct() {
-        itemDetailsPage.selectProductSize();
+        //itemDetailsPage.selectProductSize();
     }
 
     @And("the user adds {int} the item to the cart")

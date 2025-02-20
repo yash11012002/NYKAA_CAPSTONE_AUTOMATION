@@ -35,4 +35,8 @@ public class HomeSteps extends BaseSteps {
     }
 
 
+    @And("user clicks on categories tab")
+    public void userClicksOnCategoriesTab() {
+        homePage.userClicksOnCategoryTab();
+    }
 }

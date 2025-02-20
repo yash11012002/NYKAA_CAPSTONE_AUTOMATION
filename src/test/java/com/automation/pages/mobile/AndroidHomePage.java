@@ -24,6 +24,9 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
     @FindBy(xpath = "//androidx.recyclerview.widget.RecyclerView[@resource-id=\"com.fsn.nykaa:id/rv_recent_suggestion_new\"]/android.view.ViewGroup[1]")
     WebElement selectFromSuggestion;
 
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/navigation_bar_item_icon_view\"])[3]")
+    WebElement categoryTab;
+
     @Override
     public boolean isHomePageDisplayed() {
         driver.navigate().back();
@@ -55,5 +58,9 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
         //This function is implemented in Web
     }
 
+    @Override
+    public void userClicksOnCategoryTab(){
+        categoryTab.click();
+    }
 
 }

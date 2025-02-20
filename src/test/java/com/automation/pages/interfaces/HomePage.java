@@ -12,5 +12,7 @@ public interface HomePage {
 
     void clickOnGiftCardTab();
 
+    void userClicksOnCategoryTab();
+
 
 }

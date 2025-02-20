@@ -14,6 +14,8 @@ public class WebOfferPage extends  WebBasePage implements OfferPage {
 
     @Override
     public boolean verifyIsOfferPageIsDisplayed(){
+        //will do something
+        driver.navigate().back();
         return true;
     }
 }
