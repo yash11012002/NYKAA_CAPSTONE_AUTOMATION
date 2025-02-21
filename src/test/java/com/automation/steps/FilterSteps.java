@@ -19,4 +19,6 @@ public class FilterSteps extends BaseSteps{
     @When("user applies multiple filters")
     public void userAppliesMultipleFilters() {
     }
+
+
 }

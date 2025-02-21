@@ -1,6 +1,7 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.HomePage;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,6 +27,10 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
 
     @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/navigation_bar_item_icon_view\"])[3]")
     WebElement categoryTab;
+
+    @FindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"com.fsn.nykaa:id/container_layout\"])[8]")
+    WebElement addressElement;
+
 
     @Override
     public boolean isHomePageDisplayed() {
@@ -65,7 +70,23 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
 
     @Override
     public void clickOnProfileSection() {
+    }
 
+    @Override
+    public void clickOnAddressSection(){
+        accountTab.click();
+
+        while (!isElementDisplayed(addressElement)){
+            Dimension screensize=driver.manage().window().getSize();
+            int height=screensize.getHeight();
+            int width=screensize.getWidth();
+            int startX = (width / 2);
+            int startY = (int) (height * 0.8);  //
+            int endX = startX;// Start closer to the bottom (80% of screen height)
+            int endY = (int) (height * 0.2);  // End closer to the top (20% of screen height)
+            scroll(startX,startY,endX,endY);
+        }
+        addressElement.click();
     }
 
     @Override

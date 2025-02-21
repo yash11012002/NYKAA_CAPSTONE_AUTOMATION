@@ -1,5 +1,4 @@
-@web @android
-
+@android
 Feature: Updating Profile Details
 
   Scenario: To verify the profile details are updated
@@ -8,8 +7,7 @@ Feature: Updating Profile Details
     When user enters mobile number as "mobile.number"
     Then verify user is successfully logged in
     And verify user is on homepage
-    When user navigates to the profile section
-    Then verify that the user is on the profile page
-    When user changes the personal details
-    And user clicks on save details
-    Then verify that the personal details are updated
+    When user navigates to the address section
+    Then verify that the user is on the addresses page
+    When user adds new address
+    Then verify address added successfully

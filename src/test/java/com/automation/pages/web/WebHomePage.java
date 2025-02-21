@@ -89,5 +89,10 @@ public class WebHomePage extends WebBasePage implements HomePage {
         driver.findElement(By.xpath("//span[@class='css-1yxjd9r' and text()='Logout']")).click();
     }
 
+    @Override
+    public void clickOnAddressSection(){
+
+    }
+
 
 }

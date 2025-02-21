@@ -23,4 +23,8 @@ public interface HomePage {
     void clickOnLogOutBtn();
 
 
+    void clickOnAddressSection();
+
+
+
 }

@@ -59,4 +59,9 @@ public class HomeSteps extends BaseSteps {
     public void userClicksOnCategoriesTab() {
         homePage.userClicksOnCategoryTab();
     }
+
+    @When("user navigates to the address section")
+    public void userNavigatesToTheAddressSection() {
+        homePage.clickOnAddressSection();
+    }
 }

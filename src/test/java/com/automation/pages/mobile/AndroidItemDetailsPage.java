@@ -25,10 +25,10 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
     @FindBy(xpath = "//android.view.View[@resource-id=\"com.fsn.nykaa:id/exo_subtitles\"]")
     WebElement stoppingCondition;
 
-    @FindBy(id = "com.fsn.nykaa:id/btn_change_edd")
+    @FindBy(id = "com.fsn.nykaa:id/btn_pincode_bottom_sheet")
     WebElement changeAddressBtn;
 
-    @FindBy(id = "com.fsn.nykaa:id/tv_hint_label")
+    @FindBy(id = "com.fsn.nykaa:id/edittext")
     WebElement enterPincodeElement;
 
     @FindBy(id = "com.fsn.nykaa:id/rv_option_list")
@@ -48,6 +48,12 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
 
     @FindBy(id = "com.fsn.nykaa:id/tv_brands_title")
     WebElement productTitle;
+
+    @FindBy(id = "com.fsn.nykaa:id/btn_check")
+    WebElement checkBtn;
+
+    @FindBy(id = "com.fsn.nykaa:id/tv_edd_area")
+    WebElement verifyCityText;
 
     @Override
     public boolean verifyItemsDetailsPageIsDisplayed() {
@@ -101,6 +107,7 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
     @Override
     public void userSetsPincode(String pincode) {
         enterPincodeElement.sendKeys(pincode);
+        checkBtn.click();
     }
 
 
@@ -142,7 +149,7 @@ public class AndroidItemDetailsPage extends AndroidBasePage implements ItemDetai
 
     @Override
     public boolean verifyCity(String cityName) {
-        return true;
+        return verifyCityText.getText().contains(cityName);
     }
 
 

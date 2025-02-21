@@ -20,6 +20,7 @@ public class BaseSteps {
     BestSellerProductPage bestSellerProductPage;
     ProfilePage profilePage;
     WishListPage wishListPage;
+    AddressPage addressPage;
 
     public BaseSteps() {
         if (ConfigReader.getConfigValue("platform").equals("web")) {
@@ -36,6 +37,7 @@ public class BaseSteps {
             bestSellerProductPage=new WebBestSellerProductPage();
             profilePage = new WebProfilePage();
             wishListPage = new WebWishListPage();
+            addressPage=new WebAddressPage();
 
         } else {
             loginPage = new AndroidLoginPage();
@@ -51,6 +53,7 @@ public class BaseSteps {
             bestSellerProductPage=new AndroidBestSellerProductPage();
             profilePage = new AndroidProfilePage();
             wishListPage = new AndroidWishListPage();
+            addressPage=new AndroidAddressPage();
         }
     }
 }
