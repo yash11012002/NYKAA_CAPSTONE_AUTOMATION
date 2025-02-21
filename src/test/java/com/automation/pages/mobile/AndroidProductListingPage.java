@@ -27,6 +27,12 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
     @FindBy(xpath = "(//androidx.appcompat.widget.LinearLayoutCompat[@resource-id=\"com.fsn.nykaa:id/ll_product_item\"])[1]")
     WebElement firstProduct;
 
+    @FindBy(xpath = "//android.widget.Button[@resource-id=\"com.fsn.nykaa:id/btn_add_to_bag\" and @text=\"Add to Bag\"]")
+    WebElement addToBag;
+
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/img_wishlist\"])")
+    List<WebElement> addToWishListBtns;
+
 
     @Override
     public boolean isProductListingPageDisplayed() {
@@ -111,22 +117,22 @@ public class AndroidProductListingPage extends AndroidHomePage implements Produc
 
     @Override
     public void addFirstProductToBag() {
-
+        addToBag.click();
     }
 
     @Override
     public boolean isProductAddedToBag() {
-        return false;
+        return isElementDisplayed(driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.fsn.nykaa:id/tv_desc\"]")));
     }
 
     @Override
     public void addToWishList() {
-
+        addToWishListBtns.get(0).click();
     }
 
     @Override
     public boolean isProductAddedToWishList() {
-        return false;
+        return isElementDisplayed(driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.fsn.nykaa:id/tv_desc\"]")));
     }
 
 }

@@ -1,6 +1,7 @@
 package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.HomePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,6 +31,12 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
 
     @FindBy(xpath = "(//android.view.ViewGroup[@resource-id=\"com.fsn.nykaa:id/container_layout\"])[8]")
     WebElement addressElement;
+
+    @FindBy(xpath = "//android.widget.RelativeLayout[@content-desc=\"Bag\"]/android.widget.RelativeLayout")
+    WebElement cartIcon;
+
+    @FindBy(xpath = "(//android.widget.ImageView[@resource-id=\"com.fsn.nykaa:id/actionbar_icon\"])[2]")
+    WebElement wishListIcon;
 
 
     @Override
@@ -91,17 +98,32 @@ public class AndroidHomePage extends AndroidBasePage implements HomePage {
 
     @Override
     public void clickOnBagIcon() {
-
+        cartIcon.click();
     }
 
     @Override
     public void openWishListTab() {
-
+        wishListIcon.click();
     }
 
     @Override
     public void clickOnLogOutBtn() {
+        accountTab.click();
+        scrollToViewLogOutBtn();
+        scrollToViewLogOutBtn();
+        driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.fsn.nykaa:id/btn_logout\"]")).click();
+        driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.fsn.nykaa:id/tv_logout\"]")).click();
 
+    }
+
+    private void scrollToViewLogOutBtn(){
+        Dimension size = driver.manage().window().getSize();
+        int screenHeight = size.getHeight();
+        int screenWidth = size.getWidth();
+        int startX = screenWidth / 2;
+        int startY = (int) (screenHeight * 0.8);
+        int endY = (int) (screenHeight * 0.2);
+        scroll(startX,startY,startX,endY);
     }
 
 }

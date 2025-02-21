@@ -2,6 +2,7 @@ package com.automation.pages.mobile;
 
 import com.automation.pages.interfaces.CartPage;
 import com.automation.utils.ConfigReader;
+import org.openqa.selenium.By;
 import org.openqa.selenium.ScreenOrientation;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,7 +30,6 @@ public class AndroidCartPage extends AndroidBasePage implements CartPage {
     @FindBy(xpath = "//androidx.compose.ui.platform.ComposeView/android.view.View/android.view.View//android.view.View//android.widget.TextView[4]")
     WebElement discount;
 
-
     @FindBy(xpath = "(//android.view.View//android.widget.TextView)[11]")
     WebElement amountToPay;
 
@@ -44,6 +44,21 @@ public class AndroidCartPage extends AndroidBasePage implements CartPage {
 
     @FindBy(id = "com.truecaller:id/confirm")
     WebElement continueWithNumber;
+
+    @FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Delete\"]")
+    WebElement deleteBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@text=\"Yes, remove\"]")
+    WebElement removeItemBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id=\"com.fsn.nykaa:id/bag\"]")
+    WebElement cartText;
+
+    @FindBy(xpath = "//android.widget.ImageView[@content-desc=\"back\"]")
+    WebElement backBtn;
+
+    @FindBy(xpath = "//android.widget.TextView[@resource-id=\"com.fsn.nykaa:id/tvProductTitle\"]")
+    WebElement itemDescription;
 
     @Override
     public void setQuantity() {
@@ -103,6 +118,7 @@ public class AndroidCartPage extends AndroidBasePage implements CartPage {
     public boolean isProductPresentInCart() {
         String productTitle = ConfigReader.getConfigValue("product.title");
         if (productTitleOnCartPage.getText().contains(productTitle)) {
+            ConfigReader.setConfigValue("android_product_details",productTitleOnCartPage.getText());
             return true;
         }
         return false;
@@ -115,26 +131,30 @@ public class AndroidCartPage extends AndroidBasePage implements CartPage {
 
     @Override
     public boolean isCartPageDisplayed() {
-        return false;
+        return isElementDisplayed(cartText);
     }
 
     @Override
     public boolean cartPersistency() {
-        return false;
+        return itemDescription.getText().contains(ConfigReader.getConfigValue("android_product_details"));
     }
 
     @Override
     public void deleteFromCart() {
-
+        deleteBtn.click();
+        removeItemBtn.click();
     }
 
     @Override
     public boolean isProductDeleted() {
-        return false;
+        pause(2000);
+        return isElementDisplayed(driver.findElement(By.xpath("//android.widget.FrameLayout[@resource-id=\"com.fsn.nykaa:id/frameLayout\"]")));
     }
 
     @Override
     public void navigateBack() {
-
+        backBtn.click();
+        driver.navigate().back();
+        driver.navigate().back();
     }
 }

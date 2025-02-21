@@ -35,6 +35,7 @@ public class WebLoginPage extends WebBasePage implements LoginPage {
 
     @Override
     public boolean verifySignInPageIsDisplayed(){
+        pause(2000);
         return  isElementPresent(signBtn);
     }
 
