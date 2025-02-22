@@ -1,4 +1,4 @@
-package com.automation.steps;
+package com.automation.steps.ui;
 
 import com.automation.pages.interfaces.*;
 import com.automation.pages.mobile.*;

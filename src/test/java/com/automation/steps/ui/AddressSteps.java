@@ -1,10 +1,8 @@
-package com.automation.steps;
+package com.automation.steps.ui;
 
-import com.automation.pages.interfaces.AddressPage;
 import com.automation.utils.ConfigReader;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.checkerframework.checker.units.qual.C;
 import org.junit.Assert;
 
 public class AddressSteps extends BaseSteps{
